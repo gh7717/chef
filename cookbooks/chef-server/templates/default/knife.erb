@@ -1,0 +1,11 @@
+current_dir = File.dirname(__FILE__)
+log_level                <%= @loglevel %>
+log_location             STDOUT
+node_name                "<%= @user %>"
+client_key               "<%= @dir %>/<%= @user %>.pem"
+validation_client_name   "<%= @org %>"
+validation_key           "<%=  @dir %>/<%= @user %>.pem"
+chef_server_url          "https://<%= @fqdn %>/organizations/<%= @org %>"
+syntax_check_cache_path  "/root/.chef/syntaxcache"
+cookbook_path            ["/root/.chef/cookbooks"]
+knife[:editor]="vim"
